@@ -68,7 +68,7 @@ class swift(
   if !defined(Package['swift']) {
     package { 'swift':
       ensure => $package_ensure,
-      name   => $::swift::params::package_name,
+      name   => $package_name,
       tag    => ['openstack', 'swift-package'],
     }
   }
