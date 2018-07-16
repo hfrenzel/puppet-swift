@@ -54,6 +54,7 @@ class swift(
   $package_ensure         = 'present',
   $client_package_ensure  = 'present',
   $max_header_size        = '8192',
+  $package_name           = $::swift::params::package_name,
 ) {
 
   include ::swift::deps
