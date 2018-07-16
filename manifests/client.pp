@@ -9,7 +9,8 @@
 #   Defaults to 'present'.
 #
 class swift::client (
-  $ensure = $::swift::client_package_ensure
+  $ensure  = $::swift::client_package_ensure,
+  $package = $::swift::params::client_package,
 ) {
 
   if $ensure {
