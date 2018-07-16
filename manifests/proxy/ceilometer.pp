@@ -162,6 +162,7 @@ class swift::proxy::ceilometer(
   $amqp_ssl_key_password      = $::os_service_default,
   $rabbit_use_ssl             = $::os_service_default,
   $kombu_ssl_version          = $::os_service_default,
+  $package_name               = 'python-ceilometermiddleware',
   # DEPRECATED PARAMETERS
   $rabbit_user                = 'guest',
   $rabbit_password            = 'guest',
@@ -249,6 +250,7 @@ deprecated. Please use swift::proxy::ceilometer::default_transport_url instead."
 
   package { 'python-ceilometermiddleware':
     ensure => $ensure,
+    name   => $package_name,
     tag    => ['openstack', 'swift-support-package'],
   }
 
